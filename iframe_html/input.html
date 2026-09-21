@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fck{
+            color:red;
+        }html{
+            background-color: rgba(255, 200, 0, 0.789);
+        }
+        
+    </style>
+</head>
+<body>
+    <center><h1 style="background-color: blue; color: bisque;padding: 20px;">Registration form</h1></center>
+    <div>
+    <label for="first name">First name:</label>
+    <input type="text" id = "first-name" placeholder="your first name">
+    
+    </div>
+    <br>
+    <div>
+
+        <label for="last name">Last name</label>
+        <input type="text" placeholder="your last name">
+        </div>
+    <div><br>
+        <label for="Campus">campus:</label>
+        <input type="text" readonly value="Sushant University">
+
+
+    </div><br>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" placeholder="your@email">
+
+    </div><br>
+    <div>
+
+        <label for="password" id="fck">Password:</label>
+        <input type="password" placeholder="********">
+    </div>
+    <br>
+    <div>
+        <label for="Gender">Gender</label>
+        <select id="Gender">
+            <option value="Male">M</option>
+            <option value="Female">F</option>
+            <option value="Other">O</option>
+        </select>
+    <br>
+    </div>
+    <div>
+        <label for="Age">Age</label>
+        <input type="number" id="Age" placeholder="Enter your age" min="0" required>
+        
+    </div>
+    <div>
+        <label for="DOB">DOB</label>
+        <input type="date" id="DOB" required>
+    </div>
+    <div>
+        <label for="Profile_pic">Profile_pic</label>
+        <input type="file" id="Profile_pic" required>
+    </div>
+    <div>
+        <center><button type="submit" style="color: yellow; padding: 10px;background-color: black; ">Register</button></center>
+
+    </div>
+</body>
+</html>
