@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background-image: linear-gradient(to right, #fd1d52, #0a1f5f);
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        header {
+            background-color: rgba(20, 20, 40, 0.8);
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .navhead {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 30px;
+        }
+
+        .navbar {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .navlink {
+            display: flex;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        .navlink a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .navlink a:hover {
+            color: yellow;
+        }
+
+        /* Introduction - unchanged */
+        #dis {
+            margin: 120px 50px 40px;
+            max-width: 650px;
+        }
+
+        .txt {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #dis h1 {
+            font-size: 45px;
+            color: white;
+        }
+
+        #dis p {
+            color: white;
+            font-size: 23px;
+            line-height: 1.6;
+        }
+
+        #userimg {
+            text-align: right;
+            padding-right: 50px;
+            margin-top: -200px;
+        }
+
+        #userimg img {
+            max-width: 100%;
+            height: 350px;
+            width: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        #userimg img:hover {
+            transform: scale(1.03);
+        }
+
+        #btn {
+            display: inline-block;
+            margin: 30px 50px;
+            border-radius: 20px;
+            border: 2px solid white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 15px 32px;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            background-color: rgb(64, 48, 189);
+            transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        #btn:hover {
+            background-color: yellow;
+            color: black;
+            transform: translateY(-3px);
+        }
+
+        .info {
+            margin: 50px;
+            color: white;
+            font-size: 20px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .info h2 {
+            color: yellow;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .info section {
+            padding: 20px 0;
+            scroll-margin-top: 100px;
+        }
+
+        .info ul {
+            display: inline-block;
+            text-align: left;
+            margin: 0 auto;
+            padding-left: 25px;
+        }
+
+        .info li {
+            margin-bottom: 10px;
+        }
+
+        #Skills {
+            padding: 20px 0;
+            scroll-margin-top: 100px;
+            text-align: center;
+        }
+
+        #Skills ul {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .skills-cont {
+            width: 100%;
+            margin: 25px auto;
+            text-align: left;
+        }
+
+        .Skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .Skill-bar {
+            width: 100%;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.25);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: yellow;
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+
+        .html-css {
+            width: 90%;
+        }
+
+        .javascript {
+            width: 75%;
+        }
+
+        .frontend {
+            width: 85%;
+        }
+
+        .responsive {
+            width: 80%;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .info hr {
+            margin: 30px auto;
+        }
+
+        footer {
+            padding: 20px;
+            color: white;
+            text-align: center;
+            background-color: rgba(20, 20, 40, 0.5);
+        }
+
+        .mb {
+            animation: fadein 2s ease-in-out both;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            width: 1200px;
+        }
+
+       .stats-items {
+    flex: 1;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 120px;
+
+    background: linear-gradient(
+        to right,
+        rgba(253, 29, 82, 0.25),
+        rgba(84, 99, 144, 0.25)
+    );
+}
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navhead">
+            <div class="navbar">My Portfolio</div>
+
+            <div class="navlink">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#Skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mb">
+        <section id="home">
+
+            <div id="dis">
+                <h1 class="txt">
+                    Hi, I'm <span style="color: yellow;">Ritwik Gupta</span>!
+                </h1>
+
+                <p class="txt">
+                    A frontend developer exploring the world of design
+                    and open-source.
+                    <br>
+                    Turning ideas into interactive, user-friendly web applications.
+                </p>
+            </div>
+
+            <p id="userimg">
+                <img src="./1788282820097.jpeg" alt="Profile image">
+            </p>
+
+            <button id="btn" type="button"
+                onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                Verify My Work
+            </button>
+
+        </section>
+
+        <hr>
+
+        <div class="info">
+            <section id="about">
+                <h2>About Me</h2>
+
+                <p>
+                    I am a passionate frontend developer with experience
+                    in creating responsive and user-friendly web applications.
+                    I specialize in HTML, CSS, and JavaScript.
+                </p>
+
+                <div class="stats">
+                    <div class="stats-items">
+                        <h3>20+</h3>
+                        <p>Project Completed</p>
+                    </div>
+                    <div class="stats-items">
+                        <h3>4+</h3>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="stats-items">
+                        <h3>10+</h3>
+                        <p>Technologies Mastered</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+            <section id="projects">
+                <h2>Projects</h2>
+
+                <ul>
+                    <li>Project 1: Portfolio Website</li>
+                    <li>Project 2: E-commerce Platform</li>
+                    <li>Project 3: Blogging Application</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <section id="Skills">
+                <h2 id="section title">Skills</h2>
+
+                <div class="container">
+
+                    <div class="skills-cont">
+                        <div class="Skill-item">
+                            <span>HTML &amp; CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="Skill-bar">
+                            <div class="progress-bar html-css"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-cont">
+                        <div class="Skill-item">
+                            <span>JavaScript</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="Skill-bar">
+                            <div class="progress-bar javascript"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-cont">
+                        <div class="Skill-item">
+                            <span>Frontend Development</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="Skill-bar">
+                            <div class="progress-bar frontend"></div>
+                        </div>
+                    </div>
+
+                    <div class="skills-cont">
+                        <div class="Skill-item">
+                            <span>Responsive Design</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="Skill-bar">
+                            <div class="progress-bar responsive"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <hr>
+            <section id="contact">
+                <h2>Contact</h2>
+
+                <p>
+                    Email:
+                    <a href="mailto:testunkown@gmail.com" style="color: yellow;">
+                        testunkown@gmail.com
+                    </a>
+                </p>
+
+                <p>Phone: +1234567890</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Unknown. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

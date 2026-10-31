@@ -1,208 +1,246 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ritwik Gupta | Portfolio</title>
+
     <link rel="stylesheet" href="./portfolio.css">
-
-    <style>
-        body {
-            margin: 0;
-            padding-top: 80px;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            box-sizing: border-box;
-            z-index: 1000;
-        }
-    </style>
 </head>
 
 <body>
 
     <!-- Header -->
     <header>
-
-        <h2>My Portfolio</h2>
+        <h2 class="logo">Ritwik<span>.</span></h2>
 
         <nav>
+            <a href="#home">Home</a>
             <a href="./about.html">About</a>
             <a href="./projects.html">Projects</a>
             <a href="./skills.html">Skills</a>
             <a href="./contact.html">Contact</a>
         </nav>
-
     </header>
 
-
-    <!-- Main Section -->
     <main>
 
-        <!-- Introduction -->
-        <section>
+        <!-- Home Section -->
+        <section class="hero" id="home">
 
-            <p>Hello, I'm</p>
+            <div class="hero-text">
 
-            <h1>Ritwik <span>Gupta</span></h1>
+                <p class="intro">HELLO, I'M</p>
 
-            <h2>AI & Software Developer</h2>
+                <h1>Ritwik <span>Gupta</span></h1>
 
-            <p>
-                I am a Computer Science and Artificial Intelligence student
-                interested in building useful software, web applications
-                and AI-powered solutions.
-            </p>
+                <h2>AI & Software Developer</h2>
 
-            <p>
-                I enjoy learning new technologies, solving problems and
-                turning ideas into practical projects.
-            </p>
+                <p class="description">
+                    I am a Computer Science and Artificial Intelligence
+                    student interested in building useful software,
+                    web applications and AI-powered solutions.
 
-            <br>
-
-            <a href="./projects.html">
-                <button id="button">View My Work</button>
-            </a>
-
-            <a href="./contact.html">
-                <button id="button">Contact Me</button>
-            </a>
-
-        </section>
-
-
-        <!-- Profile -->
-        <section>
-
-            <h2>About Me</h2>
-
-            <img src="./1788309658591.png"
-                 height="400"
-                 alt="Ritwik Gupta">
-
-            <p>
-                I am currently pursuing B.Tech in Computer Science &
-                Artificial Intelligence.
-            </p>
-
-            <p>
-                My interests include Artificial Intelligence, Machine
-                Learning, Software Development and Web Development.
-            </p>
-
-        </section>
-
-
-        <!-- Skills -->
-        <section>
-
-            <h2>What I Work With</h2>
-
-            <ul>
-                <li>Python</li>
-                <li>Java</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>SQL</li>
-                <li>Git & GitHub</li>
-                <li>Artificial Intelligence</li>
-                <li>Machine Learning</li>
-            </ul>
-
-        </section>
-
-
-        <!-- Projects -->
-        <section>
-
-            <h2>Featured Projects</h2>
-
-            <article>
-
-                <h3>Student Study Planner</h3>
-
-                <p>
-                    A web application designed to help students manage
-                    their subjects, tasks, timetable, goals and study
-                    activities.
+                    I enjoy learning new technologies, solving problems
+                    and turning ideas into practical projects.
                 </p>
 
-                <a href="https://study-planner-ai-8.onrender.com">
-                    View Project
-                </a>
+                <div class="buttons">
+                    <a href="./projects.html" class="btn primary">
+                        View My Work →
+                    </a>
 
-            </article>
+                    <a href="./contact.html" class="btn secondary">
+                        Contact Me
+                    </a>
+                </div>
 
+            </div>
 
-            <article>
+            <div class="hero-image">
+                <div class="image-border">
+                    <img src="./1788282820097.jpeg" alt="Ritwik Gupta">
+                </div>
 
-                <h3>AI Career Navigator</h3>
-
-                <p>
-                    An AI-based project designed to help students explore
-                    career paths and make better learning decisions.
-                </p>
-
-                <a href="https://ritwik-career-navigator.lovable.app">
-                    View Project
-                </a>
-
-            </article>
+                <div class="floating-text">Learning. Building. Growing.</div>
+            </div>
 
         </section>
 
+        <!-- About Section -->
+        <section class="section" id="about">
 
-        <!-- Learning -->
-        <section>
+            <p class="section-tag">GET TO KNOW ME</p>
 
-            <h2>Currently Learning</h2>
+            <h2 class="section-title">
+                About <span>Me</span>
+            </h2>
 
-            <ol>
-                <li>Advanced Java</li>
-                <li>Data Structures and Algorithms</li>
-                <li>Artificial Intelligence</li>
-                <li>Machine Learning</li>
-                <li>Open Source Development</li>
-            </ol>
+            <div class="about-box">
+
+                <div class="about-icon">&lt;/&gt;</div>
+
+                <div>
+                    <h3>Turning ideas into projects</h3>
+
+                    <p>
+                        I am pursuing B.Tech in Computer Science and
+                        Artificial Intelligence at Vedam School of
+                        Technology.
+
+                        My interests include Artificial Intelligence,
+                        Machine Learning, Software Development and
+                        Web Development.
+                    </p>
+                </div>
+
+            </div>
 
         </section>
 
+        <!-- Skills Section -->
+        <section class="section" id="skills">
 
-        <!-- Contact -->
-        <section>
+            <p class="section-tag">MY TECHNICAL TOOLKIT</p>
 
-            <h2>Let's Connect</h2>
+            <h2 class="section-title">
+                Skills & <span>Technologies</span>
+            </h2>
+
+            <div class="skills">
+
+                <div class="skill">Python</div>
+                <div class="skill">Java</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Git & GitHub</div>
+                <div class="skill">Artificial Intelligence</div>
+                <div class="skill">Machine Learning</div>
+                
+
+            </div>
+
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+
+            <p class="section-tag">WHAT I'VE BEEN BUILDING</p>
+
+            <h2 class="section-title">
+                Featured <span>Projects</span>
+            </h2>
+
+            <div class="projects">
+
+                <article class="project-card">
+
+                    <div class="project-number">PROJECT 01</div>
+
+                    <h3>Student Study Planner</h3>
+
+                    <p>
+                        A web application that helps students manage
+                        subjects, tasks, timetables, goals and study
+                        activities, with AI-powered tools.
+                    </p>
+
+                    <div class="project-skills">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>AI</span>
+                    </div>
+
+                    <a href="https://study-planner-ai-8.onrender.com"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View Project →
+                    </a>
+
+                </article>
+
+                <article class="project-card">
+
+                    <div class="project-number">PROJECT 02</div>
+
+                    <h3>AI Career Navigator</h3>
+
+                    <p>
+                        An AI-based application designed to help
+                        students explore career paths and make
+                        informed learning decisions.
+                    </p>
+
+                    <div class="project-skills">
+                        <span>AI</span>
+                        <span>Career Guidance</span>
+                        <span>Web</span>
+                    </div>
+
+                    <a href="https://ritwik-career-navigator.lovable.app"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View Project →
+                    </a>
+
+                </article>
+
+            </div>
+
+            <a href="./projects.html" class="more-link">
+                Explore All Projects →
+            </a>
+
+        </section>
+
+        <!-- Learning Section -->
+        <section class="section">
+
+            <p class="section-tag">MY LEARNING JOURNEY</p>
+
+            <h2 class="section-title">
+                Currently <span>Learning</span>
+            </h2>
+
+            <div class="learning-list">
+                <p>01. Advanced Java</p>
+                <p>02. Data Structures and Algorithms</p>
+                <p>03. Artificial Intelligence</p>
+                <p>04. Machine Learning</p>
+                <p>05. Open Source Development</p>
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+
+            <p class="section-tag">LET'S CONNECT</p>
+
+            <h2>Have an idea? <span>Let's build it.</span></h2>
 
             <p>
-                Interested in collaboration, projects or open-source
-                opportunities?
+                Interested in projects, collaboration or learning
+                opportunities? Feel free to connect.
             </p>
 
-            <a href="./contact.html">
-                Contact Me
+            <a href="./contact.html" class="btn primary">
+                Contact Me →
             </a>
 
         </section>
 
     </main>
 
-
     <!-- Footer -->
     <footer>
-
-        <p>
-            © 2026 Ritwik Gupta. All Rights Reserved.
-        </p>
-
+        <p>© 2026 Ritwik Gupta. All Rights Reserved.</p>
+        <a href="#home">Back to Top ↑</a>
     </footer>
 
 </body>
-
 </html>
